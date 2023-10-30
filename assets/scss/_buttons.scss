@@ -1,0 +1,49 @@
+.theme-btn {
+    font-size: 16px;
+    line-height: normal;
+    padding: 8px 35px;
+    color: #000;
+    z-index: 1;
+    background:#ffff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50px;
+        background-color:$theme1;
+        -webkit-clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+        clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &::before {
+            clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+        }
+    }
+    &.apply-btn {
+        &::before {
+            border-radius: 5px;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .theme-btn {
+        font-size: 15px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .theme-btn {
+        font-size: 14px;
+        padding: 8px 30px;
+    }
+}
