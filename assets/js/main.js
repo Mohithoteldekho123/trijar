@@ -12,3 +12,10 @@ function scrollFunction() {
     }
 }
 
+
+
+// dropdown js
+
+function dropbtn() {
+    document.getElementById("dropdowncurrancy").classList.toggle("currancy")
+}

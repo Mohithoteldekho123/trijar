@@ -166,6 +166,62 @@
         }
       }
     }
+    & .currancy-dropdown {
+      & .currancy-menu {
+        width: 230px;
+        left: -60px;
+        top: 100px;
+        padding:15px 7px;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+        &.currancy {
+          top: 53px;
+          visibility: visible;
+          opacity: 1;
+        }
+        & .currancy-inner {
+          padding: 5px 8px;
+          border: 1px solid #e4e4e4;
+          gap: 6px;
+          border-radius: 4px;
+          transition: all 0.3s ease-in-out;
+          & .currancy-icon {
+            height: 20px;
+          }
+          & .currancy-name {
+            font-size: 13px;
+            color: #000;
+            line-height: 14px;
+            transition: all 0.3s ease-in-out;
+          }
+          & .currancy-countury {
+            font-size: 12px;
+            line-height: 14px;
+            color: #767676;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
+          & .currancy-check-icon {
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+          }
+          &.active {
+            border-color: $theme1;
+            & .currancy-name {
+              color: $theme1;
+            }
+            & .currancy-check-icon {
+              color: rgb(21, 190, 21);
+            }
+          }
+        }
+      }
+    }
 }
 .mega-menu {
   & .mega-menu-inner  {
@@ -173,16 +229,16 @@
   & .navbar-card {
     padding: 4px;
     & .navbar-card-img {
-      height: 120px;
+      height: 110px;
       & img {
         transition: all 0.3s ease-in-out;
       }
     }
     & .nav-card-heading {
-      font-size: 14px;
+      font-size: 13px;
       transition: all 0.3s ease-in-out;
       color: #000;
-      padding: 8px;
+      padding: 8px 4px;
     }
     &:hover {
       & .navbar-card-img {
@@ -219,8 +275,26 @@
         & img {
           filter: brightness(0);
         }
-      }      
+      }   
   }
+  & .drop-link {
+    color: $theme1 !important;
+    & .down-arrow {
+      transform: rotate(-180deg);
+      & img {
+        filter: none;
+      }
+    }
+    &.collapsed {
+      color: #000 !important;
+      & .down-arrow {
+        transform: rotate(0deg);
+        & img {
+          filter: brightness(0);
+        }
+      }
+    }
+  }   
 }
 @media (min-width:992px) {
   .navbar-nav {
@@ -245,14 +319,16 @@
     }
   }
   .mega-menu {
-     padding: 20px;
-    width: 90%;
+    padding: 20px 10px;
+    width: 80%;
     left: 50%;
     transform: translateX(-50%);
     top: 130px;
     transition: all 0.3s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    max-height: 75vh;
+    overflow-y: auto;
   }
 }
 @include media-breakpoint-down(lg) {
@@ -312,6 +388,51 @@
     & .menu-icon {
       height:30px;
       width: 40px;
+    }
+    & .currancy-btn {
+      font-size: 13px;
+      color: $theme1;
+      & .currancy-icon {
+        height: 20px;
+        width: 20px;
+      }
+    }
+    & .currancy-dropdown {
+      & .currancy-menu {
+        width: 200px;
+        left: -65px;
+        &.currancy {
+          top: 50px;
+        }
+        & .currancy-inner {
+          & .currancy-icon {
+            height: 17px;
+          }
+          & .currancy-name {
+            font-size: 12px;
+          }
+          & .currancy-countury {
+            font-size: 11px;
+          }
+          & .currancy-check-icon {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .mega-menu {
+    & .mega-menu-inner  {
+    }
+    & .navbar-card {
+      padding: 3px;
+      & .navbar-card-img {
+        height: 100px;
+      }
+      & .nav-card-heading {
+        font-size: 13px;
+        padding: 6px 6px 4px;
+      }
     }
   }
 }
