@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- favicon  -->
+    <!-- <link rel="icon" type="image/x-icon" href="assets/img/index/logo2.png"> -->
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- bootstrap css  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="assets/FontAwesome/css/all.min.css">
+    <!-- swiper js css  -->
+    <link rel="stylesheet" href="assets/libs/swiperjs/css/swiper-bundle.min.css">
+    <!-- select box library -->
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <!-- select box library -->
+    <link rel="stylesheet" href="assets/libs/select2/css/select2.min.css"/>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+
+    <!-- navbar start  -->
+    <nav class="navbar navbar-expand-xl container-fluid bg-white" id="navbar" aria-label="Offcanvas navbar large">
+        <div class="container-inner mx-auto d-flex align-items-center justify-content-between position-relative">
+            <a class="navbar-brand nav-logo py-0" href="{{url('/')}}">
+                <img src="{{asset('assets/front/images/logo_main.webp')}}" id="headerlogo" alt="logo" class="h-100 w-100 img-fluid">
+            </a>
+            <ul class="navbar-nav d-xl-flex d-none justify-content-center align-items-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link fw-medium p-0 position-relative  active" aria-current="page" href="{{url('/')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex p-0 align-items-center gap-2 fw-medium position-relative " href="{{url('packages')}}"> Tour Packages  
+                        <span class="down-arrow d-flex align-items-center justify-content-center">
+                            <img src="{{asset('assets/front/images/down.svg')}}" alt="down arrow" class="h-100 w-100 img-fluid">
+                        </span>
+                    </a>
+                    <div class="mega-menu border-top position-absolute rounded-2 bg-white shadow">
+                        <div class="row g-2 mega-menu-inner row-cols-5">
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/home-package/dubai-package.webp')}}" alt="Dubai Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/dubai-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Dubai Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1700806320.webp')}}" alt="India Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/india-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">India Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697873018.webp')}}" alt="UAE Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/uae-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">UAE Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872610.webp')}}" alt="Georgia Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/georgia-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Georgia Tour Packages</a>
+                                </div>
+                            </div> 
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872830.webp')}}" alt="Jordan Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/jordan-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Jordan Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872786.webp')}}" alt="Egypt Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/egypt-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Egypt Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872967.webp')}}" alt="Sri Lanka Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/sri-lanka-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Sri Lanka Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872751.webp')}}" alt="Azerbaijan Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/azerbaijan-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Azerbaijan Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1698645526.webp')}}" alt="Singapore Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/singapore-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Singapore Tour Packages</a>
+                                </div>
+                            </div> 
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697873082.webp')}}" alt="Maldives Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/maldives-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Maldives Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1700806426.webp')}}" alt="Thailand Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/thailand-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Thailand Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872917.webp')}}" alt="Oman Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/oman-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Oman Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697873116.webp')}}" alt="Turkey Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/turkey-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Turkey Tour Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1700806397.webp')}}" alt="Bali Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/bali-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Bali Tour Packages</a>
+                                </div>
+                            </div> 
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('uploads/800/500/fff/country_thumbnail/1700806457.webp')}}" alt="Malaysia Tour Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('packages/malaysia-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link"> Malaysia Tour Packages </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex p-0 align-items-center gap-2 fw-medium position-relative " href="{{url('honeymoon-packages')}}">  Honeymoon Packages    
+                        <span class="down-arrow d-flex align-items-center justify-content-center">
+                            <img src="{{asset('assets/front/images/down.svg')}}" alt="down arrow" class="h-100 w-100 img-fluid">
+                        </span>
+                    </a>
+                    <div class="mega-menu mega-menu2 border-top position-absolute rounded-2 bg-white shadow">
+                        <div class="row g-2 mega-menu-inner row-cols-4">
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/honeymoon/india-honeymoon.webp')}}" alt="India Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('honeymoon-packages/india')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">India Honeymoon Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/honeymoon/dubai-honeymoon.webp')}}" alt="Dubai Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('honeymoon-packages/dubai')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Dubai Honeymoon Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/honeymoon/egypt-honeymoon.webp')}}" alt="Egypt Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('honeymoon-packages/egypt')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Egypt Honeymoon Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/honeymoon/sri-lanka-honeymoon.webp')}}" alt="Sri Lanka Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('honeymoon-packages/sri-lanka')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Sri Lanka Honeymoon Packages </a>
+                                </div>
+                            </div> 
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/honeymoon/singapore-honeymoon.webp')}}" alt="Singapore Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('honeymoon-packages/singapore')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Singapore Honeymoon Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/honeymoon/maldives-honeymoon.webp')}}" alt="Maldives Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('honeymoon-packages/maldives')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Maldives Honeymoon Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/honeymoon/thailand-honeymoon.webp')}}" alt="Thailand Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('honeymoon-packages/thailand')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Thailand Honeymoon Packages</a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                    <div class="navbar-card-img rounded-2 overflow-hidden">
+                                        <img src="{{asset('assets/front/images/honeymoon/turkey-honeymoon.webp')}}" alt="Turkey Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                    </div>
+                                    <a href="{{url('honeymoon-packages/turkey')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Turkey Honeymoon Packages</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="tel:+971-565016625" class="whatsapp-btn d-inline-flex align-items-center text-decoration-none">
+                        <span class="whatsapp-icon whatsapp-icon2 d-flex align-items-center justify-content-center">
+                            <img src="{{asset('assets/front/images/whatsapp.png')}}" alt="whatsapp" class="h-100 w-100 img-fluid object-fit-contain">
+                        </span>
+                        <div class="chat-number w-100"> +971-565016625 </div>
+                    </a>                  
+                </li>
+                <li class="nav-item">
+                    <a href="mailto:info@travejar.com" class="whatsapp-btn d-inline-flex align-items-center text-decoration-none">
+                        <span class="whatsapp-icon d-flex align-items-center justify-content-center">
+                            <img src="{{asset('assets/front/images/gmail.svg')}}" alt="email" class="h-100 w-100 img-fluid object-fit-contain">
+                        </span>
+                        <div class="chat-number w-100"> info@travejar.com </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-center gap-3">
+               <div class="currancy-dropdown position-relative">
+                   <button class="currancy-btn d-flex align-items-center currancybtn rounded-2 fw-medium d-flex align-items-center dropdown-toggle" onclick="dropbtn()">
+                        <span class="currancy-icon d-flex align-items-center justify-content-center">
+                            <img src="{{asset('assets/front/images/currancy.svg')}}" alt="currancy" class="h-100 w-100 img-fluid">
+                        </span>
+                        INR
+                   </button>
+                   <div class="currancy-menu border-top d-flex align-items-center flex-column overflow-hidden shadow position-absolute rounded-2 bg-white" id="dropdowncurrancy">
+                        <button class="currancy-inner active fw-medium bg-transparent justify-content-between d-flex align-items-center w-100">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="currancy-icon d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/india.svg" alt="india" class="h-100 w-100 img-fluid">
+                                </span>
+                                <span class="d-inline-flex flex-column text-start">
+                                    <span class="currancy-name fw-semibold">INR - ₹</span>
+                                    <span class="currancy-countury">Indian Rupee</span>
+                                </span>
+                            </span>
+                            <span class="currancy-check-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </button>
+                        <button class="currancy-inner fw-medium bg-transparent justify-content-between d-flex align-items-center w-100">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="currancy-icon d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/usdt.svg" alt="usd" class="h-100 w-100 img-fluid">
+                                </span>
+                                <span class="d-inline-flex flex-column text-start">
+                                    <span class="currancy-name">USD - $</span>
+                                    <span class="currancy-countury">United States Dollar</span>
+                                </span>
+                            </span>
+                            <span class="currancy-check-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </button>
+                        <button class="currancy-inner fw-medium bg-transparent justify-content-between d-flex align-items-center w-100">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="currancy-icon d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/eur.svg" alt="eur" class="h-100 w-100 img-fluid">
+                                </span>
+                                <span class="d-inline-flex flex-column text-start">
+                                    <span class="currancy-name">EUR - €</span>
+                                    <span class="currancy-countury">Euro</span>
+                                </span>
+                            </span>
+                            <span class="currancy-check-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </button>
+                        <button class="currancy-inner fw-medium bg-transparent justify-content-between d-flex align-items-center w-100">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="currancy-icon d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/sgd.svg" alt="sgd" class="h-100 w-100 img-fluid">
+                                </span>
+                                <span class="d-inline-flex flex-column text-start">
+                                    <span class="currancy-name">SGD - $</span>
+                                    <span class="currancy-countury">Singapore Dollar</span>
+                                </span>
+                            </span>
+                            <span class="currancy-check-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </button>
+                        <button class="currancy-inner fw-medium bg-transparent justify-content-between d-flex align-items-center w-100">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="currancy-icon d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/aud.svg" alt="aud" class="h-100 w-100 img-fluid">
+                                </span>
+                                <span class="d-inline-flex flex-column text-start">
+                                    <span class="currancy-name fw-semibold">AUD - $</span>
+                                    <span class="currancy-countury">Australian Dollar</span>
+                                </span>
+                            </span>
+                            <span class="currancy-check-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </button>
+                        <button class="currancy-inner fw-medium bg-transparent justify-content-between d-flex align-items-center w-100">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="currancy-icon d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/gbp.svg" alt="gbp" class="h-100 w-100 img-fluid">
+                                </span>
+                                <span class="d-inline-flex flex-column text-start">
+                                    <span class="currancy-name">GBP - £</span>
+                                    <span class="currancy-countury">British Pound</span>
+                                </span>
+                            </span>
+                            <span class="currancy-check-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </button>
+                        <button class="currancy-inner fw-medium bg-transparent justify-content-between d-flex align-items-center w-100">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="currancy-icon d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/aed.svg" alt="aed" class="h-100 w-100 img-fluid">
+                                </span>
+                                <span class="d-inline-flex flex-column text-start">
+                                    <span class="currancy-name">AED - د.إ</span>
+                                    <span class="currancy-countury">United Arab Emirates Dirham</span>
+                                </span>
+                            </span>
+                            <span class="currancy-check-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </button>
+                        <button class="currancy-inner fw-medium bg-transparent justify-content-between d-flex align-items-center w-100">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="currancy-icon d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/zar.svg" alt="zar" class="h-100 w-100 img-fluid">
+                                </span>
+                                <span class="d-inline-flex flex-column text-start">
+                                    <span class="currancy-name">ZAR - R</span>
+                                    <span class="currancy-countury">South African Rand</span>
+                                </span>
+                            </span>
+                            <span class="currancy-check-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </button>
+                   </div>
+               </div>
+               <button class="navbar-toggler border d-xl-none d-flex align-items-center justify-content-center menu-icon shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbaroffcanvas" aria-controls="navbaroffcanvas" aria-label="Toggle navigation">
+                    <img src="{{asset('assets/front/images/menu.svg')}}" alt="menu" class="h-100 w-100 img-fluid">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar dropdown start  -->
+    <div class="offcanvas offcanvas-start nav-offcanvas" data-bs-scroll="true" tabindex="-1" id="navbaroffcanvas" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header bg-light border-bottom">
+        <div class="offcanvas-title offcanvas-logo" id="offcanvasWithBothOptionsLabel">
+            <img src="{{asset('assets/front/images/logo_main.webp')}}" alt="offcanvas-logo" class="h-100 w-100 img-fluid">
+        </div>
+        <button type="button" class="btn-close shadow-none btnclose" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 accordion" id="accordionExample">
+                <li class="nav-item border rounded-2 overflow-hidden">
+                    <a class="nav-link fw-medium p-0 position-relative  active" aria-current="page" href="{{url('/')}}">Home</a>
+                </li>
+                <li class="nav-item border rounded-2 overflow-hidden accordion-item">
+                    <a class="nav-link drop-link bg-transparent collapsed w-100 justify-content-between d-flex p-0 align-items-center gap-2 fw-medium position-relative accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tourpackges" aria-expanded="true" aria-controls="tourpackges"> Tour Packages  
+                        <span class="down-arrow d-flex align-items-center justify-content-center"><img src="{{asset('assets/front/images/down.svg')}}" alt="down arrow" class="h-100 w-100 img-fluid"></span>
+                    </a>
+                    <div id="tourpackges" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="card card-body border-0 ">
+                            <div class="mega-menu rounded-2">
+                                <div class="row g-2 mega-menu-inner row-cols-md-4 row-cols-sm-3 row-cols-2">
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/home-package/dubai-package.webp')}}" alt="Dubai Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/dubai-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Dubai Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1700806320.webp')}}" alt="India Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/india-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">India Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697873018.webp')}}" alt="UAE Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/uae-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">UAE Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872610.webp')}}" alt="Georgia Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/georgia-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Georgia Tour Packages</a>
+                                        </div>
+                                    </div> 
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872830.webp')}}" alt="Jordan Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/jordan-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Jordan Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872786.webp')}}" alt="Egypt Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/egypt-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Egypt Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872967.webp')}}" alt="Sri Lanka Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/sri-lanka-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Sri Lanka Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872751.webp')}}" alt="Azerbaijan Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/azerbaijan-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Azerbaijan Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1698645526.webp')}}" alt="Singapore Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/singapore-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Singapore Tour Packages</a>
+                                        </div>
+                                    </div> 
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697873082.webp')}}" alt="Maldives Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/maldives-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Maldives Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1700806426.webp')}}" alt="Thailand Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/thailand-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Thailand Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697872917.webp')}}" alt="Oman Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/oman-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Oman Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1697873116.webp')}}" alt="Turkey Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/turkey-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Turkey Tour Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1700806397.webp')}}" alt="Bali Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/bali-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Bali Tour Packages</a>
+                                        </div>
+                                    </div> 
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('uploads/800/500/fff/country_thumbnail/1700806457.webp')}}" alt="Malaysia Tour Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('packages/malaysia-tours')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link"> Malaysia Tour Packages </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item border rounded-2 overflow-hidden accordion-item">
+                    <a class="nav-link drop-link bg-transparent collapsed w-100 justify-content-between d-flex p-0 align-items-center gap-2 fw-medium position-relative accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#honeymoonpackges" aria-expanded="true" aria-controls="honeymoonpackges">  Honeymoon Packages     
+                        <span class="down-arrow d-flex align-items-center justify-content-center"><img src="{{asset('assets/front/images/down.svg')}}" alt="down arrow" class="h-100 w-100 img-fluid"></span>
+                    </a>
+                    <div id="honeymoonpackges" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="card card-body border-0">
+                            <div class="mega-menu rounded-2">
+                                <div class="row g-2 mega-menu-inner row-cols-md-4 row-cols-sm-3 row-cols-2">
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/honeymoon/india-honeymoon.webp')}}" alt="India Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('honeymoon-packages/india')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">India Honeymoon Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/honeymoon/dubai-honeymoon.webp')}}" alt="Dubai Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('honeymoon-packages/dubai')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Dubai Honeymoon Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/honeymoon/egypt-honeymoon.webp')}}" alt="Egypt Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('honeymoon-packages/egypt')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Egypt Honeymoon Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/honeymoon/sri-lanka-honeymoon.webp')}}" alt="Sri Lanka Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('honeymoon-packages/sri-lanka')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Sri Lanka Honeymoon Packages </a>
+                                        </div>
+                                    </div> 
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/honeymoon/singapore-honeymoon.webp')}}" alt="Singapore Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('honeymoon-packages/singapore')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Singapore Honeymoon Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/honeymoon/maldives-honeymoon.webp')}}" alt="Maldives Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('honeymoon-packages/maldives')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Maldives Honeymoon Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/honeymoon/thailand-honeymoon.webp')}}" alt="Thailand Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('honeymoon-packages/thailand')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Thailand Honeymoon Packages</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="navbar-card position-relative h-100 rounded-2 shadow-sm overflow-hidden">
+                                            <div class="navbar-card-img rounded-2 overflow-hidden">
+                                                <img src="{{asset('assets/front/images/honeymoon/turkey-honeymoon.webp')}}" alt="Turkey Honeymoon Packages" class="h-100 w-100 img-fluid">
+                                            </div>
+                                            <a href="{{url('honeymoon-packages/turkey')}}" class="nav-card-heading d-block text-center fw-medium text-decoration-none stretched-link">Turkey Honeymoon Packages</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item border rounded-2 p-2">
+                    <a href="tel:+971-565016625" class="whatsapp-btn d-inline-flex align-items-center text-decoration-none w-100">
+                        <span class="whatsapp-icon whatsapp-icon2 d-flex align-items-center justify-content-center">
+                            <img src="{{asset('assets/front/images/whatsapp.png')}}" alt="whatsapp" class="h-100 w-100 img-fluid object-fit-contain">
+                        </span>
+                        <div class="chat-number w-100"> +971-565016625 </div>
+                    </a>                  
+                </li>
+                <li class="nav-item border rounded-2 p-2">
+                    <a href="mailto:info@travejar.com" class="whatsapp-btn d-inline-flex align-items-center text-decoration-none w-100">
+                        <span class="whatsapp-icon d-flex align-items-center justify-content-center">
+                            <img src="{{asset('assets/front/images/gmail.svg')}}" alt="email" class="h-100 w-100 img-fluid object-fit-contain">
+                        </span>
+                        <div class="chat-number w-100"> info@travejar.com </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- navbar dropdown end  -->
+    <!-- navbar end  -->
+
+
+    <!-- jquery cdn  -->
+    <script src="assets/libs/select2/js/jquery.min.js"></script>
+    <!-- bootstrap js  -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- custom js  -->
+    <script src="assets/js/main.js"></script>
+
+    
+
+    
+</body>
+</html>

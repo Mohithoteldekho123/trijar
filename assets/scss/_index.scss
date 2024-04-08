@@ -6,7 +6,7 @@
   color: #000;
   padding-bottom:6px;
   & span {
-    color: $theme1;
+    color: #d71921;
   }
   &::before {
     content: '';
@@ -81,363 +81,367 @@
 
 
 // navbar start 
-.navbar {
-    // background-color: rgba(255, 255, 255, 0.493);
-    transition: all 0.3s ease-in-out;
-    background: #fff;
-    & .nav-logo {
-      width: 140px;
-    }
-    & .whatsapp-btn {
-      padding: 4px 12px;
-      background: white;
-      gap: 5px;
-      & .whatsapp-icon {
-        height: 25px;
-        width: 25px;
-        transition: all 0.3s ease-in-out;
-        animation: crescendo 1.5s alternate infinite ease-in;
-      }
-      @keyframes crescendo {
-        0%   {transform: scale(.9);}
-        100% {transform: scale(1.3);}
-      }
-      & .chat-title {
-        font-size: 14px;
-        line-height: normal;
-        color: #000;
-        font-weight: 500;
-        transition: all 0.3s ease-in-out;
-      }
-      & .chat-number {
-        font-size: 13px;
-        line-height: normal;
-        color: #000;
-      }
-      &:hover {
-        & .whatsapp-icon {
-          transform: scale(1.2);
-        }
-        & .chat-title {
-          color: $theme1;
-        }
-      }
-    }
-    &.fixed-navbar {
-      top: 0;
-      animation-name: fixedAnim;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
-    }
-    @keyframes fixedAnim {
-      from {
-          top: -100px;
-      }
-      to {
-          top: 0;
-      }
-    }
-    & .menu-icon {
-      height:35px;
-      width: 45px;
-      // margin-bottom: 5px;
-    }
-    & .currancy-btn {
-      border: 1px solid $theme1;
-      background: transparent;
-      transition: all 0.3s ease-in-out;
-      padding: 4px 7px;
-      font-size: 14px;
-      gap: 6px;
-      color: $theme1;
-      & .currancy-icon {
-        height: 23px;
-        width: 23px;
-        & img {
-          transition: all 0.3s ease-in-out;
-        }
-      }
-      &:hover {
-        background: $theme1;
-        color: #fff;
-        & .currancy-icon {
-          & img {
-            filter: brightness(10);
-          }
-        }
-      }
-    }
-    & .currancy-dropdown {
-      & .currancy-menu {
-        width: 230px;
-        left: -60px;
-        top: 100px;
-        padding:15px 7px;
-        gap: 10px;
-        transition: all 0.3s ease-in-out;
-        visibility: hidden;
-        opacity: 0;
-        &.currancy {
-          top: 53px;
-          visibility: visible;
-          opacity: 1;
-        }
-        & .currancy-inner {
-          padding: 5px 8px;
-          border: 1px solid #e4e4e4;
-          gap: 6px;
-          border-radius: 4px;
-          transition: all 0.3s ease-in-out;
-          & .currancy-icon {
-            height: 20px;
-          }
-          & .currancy-name {
-            font-size: 13px;
-            color: #000;
-            line-height: 14px;
-            transition: all 0.3s ease-in-out;
-          }
-          & .currancy-countury {
-            font-size: 12px;
-            line-height: 14px;
-            color: #767676;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-          }
-          & .currancy-check-icon {
-            font-size: 16px;
-            transition: all 0.3s ease-in-out;
-          }
-          &.active {
-            border-color: $theme1;
-            & .currancy-name {
-              color: $theme1;
-            }
-            & .currancy-check-icon {
-              color: rgb(21, 190, 21);
-            }
-          }
-        }
-      }
-    }
-}
-.mega-menu {
-  & .mega-menu-inner  {
-  }
-  & .navbar-card {
-    padding: 4px;
-    & .navbar-card-img {
-      height: 110px;
-      & img {
-        transition: all 0.3s ease-in-out;
-      }
-    }
-    & .nav-card-heading {
-      font-size: 13px;
-      transition: all 0.3s ease-in-out;
-      color: #000;
-      padding: 8px 4px;
-    }
-    &:hover {
-      & .navbar-card-img {
-        & img {
-          transform: scale(1.1) rotate(5deg);
+// .navbar {
+//     transition: all 0.3s ease-in-out;
+//     & .container-inner {
+//       width: 93%;
+//     }
+//     & .nav-logo {
+//       width: 160px;
+//     }
+//     &.fixed-navbar {
+//       top: 0;
+//       animation-name: fixedAnim;
+//       animation-duration: 1s;
+//       animation-fill-mode: forwards;
+//       box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
+//     }
+//     @keyframes fixedAnim {
+//       from {
+//           top: -100px;
+//       }
+//       to {
+//           top: 0;
+//       }
+//     }
+//     & .menu-icon {
+//       height:35px;
+//       width: 48px;
+//       background-color: #d71921;
+//       border-radius: 4px;
+//       & img {
+//         filter: invert(1);
+//       }
+//     }
+//     & .currancy-btn {
+//       border: 1px solid #d71921;
+//       background: transparent;
+//       transition: all 0.3s ease-in-out;
+//       padding: 4px 7px;
+//       font-size: 14px;
+//       gap: 6px;
+//       color: #d71921;
+//       & .currancy-icon {
+//         height: 23px;
+//         width: 23px;
+//         & img {
+//           transition: all 0.3s ease-in-out;
+//         }
+//       }
+//       &:hover {
+//         background: #d71921;
+//         color: #fff;
+//         & .currancy-icon {
+//           & img {
+//             filter: brightness(10);
+//           }
+//         }
+//       }
+//     }
+//     & .currancy-dropdown {
+//       & .currancy-menu {
+//         width: 230px;
+//         left: -140px;
+//         top: 100px;
+//         padding:15px 7px;
+//         gap: 10px;
+//         transition: all 0.3s ease-in-out;
+//         visibility: hidden;
+//         opacity: 0;
+//         &.currancy {
+//           top: 53px;
+//           visibility: visible;
+//           opacity: 1;
+//         }
+//         & .currancy-inner {
+//           padding: 5px 8px;
+//           border: 1px solid #e4e4e4;
+//           gap: 6px;
+//           border-radius: 4px;
+//           transition: all 0.3s ease-in-out;
+//           & .currancy-icon {
+//             height: 20px;
+//           }
+//           & .currancy-name {
+//             font-size: 13px;
+//             color: #000;
+//             line-height: 14px;
+//             transition: all 0.3s ease-in-out;
+//           }
+//           & .currancy-countury {
+//             font-size: 12px;
+//             line-height: 14px;
+//             color: #767676;
+//             overflow: hidden;
+//             text-overflow: ellipsis;
+//             display: -webkit-box;
+//             -webkit-line-clamp: 1;
+//             -webkit-box-orient: vertical;
+//           }
+//           & .currancy-check-icon {
+//             font-size: 16px;
+//             transition: all 0.3s ease-in-out;
+//           }
+//           &.active {
+//             border-color: #d71921;
+//             & .currancy-name {
+//               color: #d71921;
+//             }
+//             & .currancy-check-icon {
+//               color: rgb(21, 190, 21);
+//             }
+//           }
+//         }
+//       }
+//     }
+// }
+// .whatsapp-btn {
+//   gap: 5px;
+//   & .whatsapp-icon {
+//     height: 17px;
+//     max-width: 25px;
+//     min-width: 25px;
+//     transition: all 0.3s ease-in-out;
+//   }
+//   & .whatsapp-icon2 {
+//     height: 25px;
+//     max-width: 25px;
+//     min-width: 25px;
+//   }
+//   & .chat-number {
+//     font-size: 15px;
+//     line-height: normal;
+//     color: #000;
+//     font-weight: 500;
+//   }
+//   &:hover {
+//     & .whatsapp-icon {
+//       transform: scale(1.2);
+//     }
+//     & .chat-title {
+//       color: #d71921;
+//     }
+//   }
+// }
+// .mega-menu {
+//   & .navbar-card {
+//     padding: 4px;
+//     & .navbar-card-img {
+//       height: 110px;
+//       & img {
+//         transition: all 0.3s ease-in-out;
+//       }
+//     }
+//     & .nav-card-heading {
+//       font-size: 13px;
+//       transition: all 0.3s ease-in-out;
+//       color: #000;
+//       padding: 8px 4px;
+//     }
+//     &:hover {
+//       & .navbar-card-img {
+//         & img {
+//           transform: scale(1.1) rotate(5deg);
           
-        }
-      }
-      & .nav-card-heading {
-        color: $theme1;
+//         }
+//       }
+//       & .nav-card-heading {
+//         color: #d71921;
         
-      }
-    }
-  }
-}
-.nav-offcanvas {
-  & .offcanvas-logo {
-    width: 130px;
-  }
-  & .btnclose {
-    font-size: 14px;
-  }
-}
-.navbar-nav {
-  gap: 45px;
-  & .nav-link {
-      font-size: 16px;
-      color: #000;
-      transition: all 0.3s ease-in-out;
-      & .down-arrow {
-        height: 14px;
-        width: 14px;
-        transition: all 0.3s ease-in-out;
-        & img {
-          filter: brightness(0);
-        }
-      }   
-  }
-  & .drop-link {
-    color: $theme1 !important;
-    & .down-arrow {
-      transform: rotate(-180deg);
-      & img {
-        filter: none;
-      }
-    }
-    &.collapsed {
-      color: #000 !important;
-      & .down-arrow {
-        transform: rotate(0deg);
-        & img {
-          filter: brightness(0);
-        }
-      }
-    }
-  }   
-}
-@media (min-width:992px) {
-  .navbar-nav {
-    & .nav-item {
-      padding: 18px 0;
-      &:hover {
-        & .mega-menu  {
-          top: 67px;
-          opacity: 1;
-          visibility: visible;
-        }
-        & .nav-link {
-          color: $theme1;
-          & .down-arrow {
-            transform: rotate(-180deg);
-            & img {
-              filter: none;
-            }
-          } 
-        }
-      }
-    }
-  }
-  .mega-menu {
-    padding: 20px 10px;
-    width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 130px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
-    max-height: 75vh;
-    overflow-y: auto;
-  }
-}
-@include media-breakpoint-down(lg) {
-  .navbar {
-    & .nav-logo {
-      width: 130px;
-    }
-    & .navbar-offcanvas {
-      max-width: 280px;
-      & .offcanvas-logo {
-        width: 120px;
-      }
-      & .btnclose {
-        font-size: 14px;
-      }
-    }
-  }
-  .navbar-nav {
-    gap: 15px;
-    & .nav-link {
-        font-size: 15px;
-    }
-    & .nav-item {
-      padding: 10px;
-    }
-  }
-}
-@include media-breakpoint-down(sm) {
-  .navbar {
-    & .nav-logo {
-      width: 120px;
-    }
-    & .navbar-offcanvas {
-      & .offcanvas-logo {
-        width: 110px;
-      }
-    }
-    & .navbar-nav {
-      gap: 25px;
-      & .nav-link {
-          font-size: 14px;
-      }
-    }
-    & .whatsapp-btn {
-      padding: 3px 10px;
-      & .whatsapp-icon {
-        height: 20px;
-        width: 20px;
-      }
-      & .chat-title {
-        font-size: 13px;
-      }
-      & .chat-number {
-        font-size: 12px;
-      }
-    }
-    & .menu-icon {
-      height:30px;
-      width: 40px;
-    }
-    & .currancy-btn {
-      font-size: 13px;
-      color: $theme1;
-      & .currancy-icon {
-        height: 20px;
-        width: 20px;
-      }
-    }
-    & .currancy-dropdown {
-      & .currancy-menu {
-        width: 200px;
-        left: -65px;
-        &.currancy {
-          top: 50px;
-        }
-        & .currancy-inner {
-          & .currancy-icon {
-            height: 17px;
-          }
-          & .currancy-name {
-            font-size: 12px;
-          }
-          & .currancy-countury {
-            font-size: 11px;
-          }
-          & .currancy-check-icon {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-  .mega-menu {
-    & .mega-menu-inner  {
-    }
-    & .navbar-card {
-      padding: 3px;
-      & .navbar-card-img {
-        height: 100px;
-      }
-      & .nav-card-heading {
-        font-size: 13px;
-        padding: 6px 6px 4px;
-      }
-    }
-  }
-}
+//       }
+//     }
+//   }
+//   &.mega-menu2 {
+//     & .navbar-card-img {
+//       height: 140px;
+//     }
+//   }
+// }
+// .nav-offcanvas {
+//   width: 90% !important;
+//   & .offcanvas-logo {
+//     width: 130px;
+//   }
+//   & .btnclose {
+//     font-size: 14px;
+//   }
+// }
+// .navbar-nav {
+//   gap: 30px;
+//   & .nav-link {
+//       font-size: 16px;
+//       color: #000;
+//       transition: all 0.3s ease-in-out;
+//       & .down-arrow {
+//         height: 14px;
+//         width: 14px;
+//         transition: all 0.3s ease-in-out;
+//         & img {
+//           filter: brightness(0);
+//         }
+//       }   
+//   }
+//   & .drop-link {
+//     color: #d71921 !important;
+//     & .down-arrow {
+//       transform: rotate(-180deg);
+//       & img {
+//         filter: none;
+//       }
+//     }
+//     &.collapsed {
+//       color: #000 !important;
+//       & .down-arrow {
+//         transform: rotate(0deg);
+//         & img {
+//           filter: brightness(0);
+//         }
+//       }
+//     }
+//   }   
+// }
+// @media (min-width:1200px) {
+//   .navbar-nav {
+//     & .nav-item {
+//       padding: 14px 0;
+//       &:hover {
+//         & .mega-menu  {
+//           top: 67px;
+//           opacity: 1;
+//           visibility: visible;
+//         }
+//         & .nav-link {
+//           color: #d71921;
+//           & .down-arrow {
+//             transform: rotate(-180deg);
+//             & img {
+//               filter: none;
+//             }
+//           } 
+//         }
+//       }
+//     }
+//   }
+//   .mega-menu {
+//     padding: 20px 10px;
+//     width: 80%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     top: 130px;
+//     transition: all 0.3s ease-in-out;
+//     opacity: 0;
+//     visibility: hidden;
+//     max-height: 75vh;
+//     overflow-y: auto;
+//   }
+// }
+// @include media-breakpoint-down(xl) {
+  // .navbar {
+  //   & .nav-logo {
+  //     width: 130px;
+  //   }
+  //   & .navbar-offcanvas {
+  //     max-width: 280px;
+  //     & .offcanvas-logo {
+  //       width: 120px;
+  //     }
+  //     & .btnclose {
+  //       font-size: 14px;
+  //     }
+  //   }
+  // }
+  // .navbar-nav {
+  //   gap: 15px;
+  //   & .nav-link {
+  //       font-size: 15px;
+  //       padding: 10px !important;
+  //       &::after {
+  //         display: none;
+  //       }
+  //   }
+  //   & .card {
+  //     padding: 12px;
+  //   }
+  // }
+// }
+// @include media-breakpoint-down(sm) {
+  // .navbar {
+  //   & .nav-logo {
+  //     width: 120px;
+  //   }
+  //   & .navbar-offcanvas {
+  //     & .offcanvas-logo {
+  //       width: 110px;
+  //     }
+  //   }
+  //   & .navbar-nav {
+  //     gap: 25px;
+  //     & .nav-link {
+  //         font-size: 14px;
+  //     }
+  //   }
+  //   & .whatsapp-btn {
+  //     padding: 3px 10px;
+  //     & .whatsapp-icon {
+  //       height: 20px;
+  //       width: 20px;
+  //     }
+  //     & .chat-title {
+  //       font-size: 13px;
+  //     }
+  //     & .chat-number {
+  //       font-size: 12px;
+  //     }
+  //   }
+  //   & .menu-icon {
+  //     height:30px;
+  //     width: 40px;
+  //   }
+  //   & .currancy-btn {
+  //     font-size: 13px;
+  //     color: #d71921;
+  //     & .currancy-icon {
+  //       height: 20px;
+  //       width: 20px;
+  //     }
+  //   }
+  //   & .currancy-dropdown {
+  //     & .currancy-menu {
+  //       width: 200px;
+  //       left: -65px;
+  //       &.currancy {
+  //         top: 50px;
+  //       }
+  //       & .currancy-inner {
+  //         & .currancy-icon {
+  //           height: 17px;
+  //         }
+  //         & .currancy-name {
+  //           font-size: 12px;
+  //         }
+  //         & .currancy-countury {
+  //           font-size: 11px;
+  //         }
+  //         & .currancy-check-icon {
+  //           font-size: 14px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .mega-menu {
+  //   & .navbar-card {
+  //     padding: 3px;
+  //     & .navbar-card-img {
+  //       height: 100px;
+  //     }
+  //     & .nav-card-heading {
+  //       font-size: 13px;
+  //       padding: 6px 6px 4px;
+  //     }
+  //   }
+  // }
+// }
 // navbar end 
 
 
